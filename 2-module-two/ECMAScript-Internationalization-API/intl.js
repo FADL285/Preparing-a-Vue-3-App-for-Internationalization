@@ -26,3 +26,19 @@ console.log(
     currency: 'EGP'
   }).format(123459.99)
 );
+
+console.log(
+  Intl.NumberFormat('eg', {
+    style: 'currency',
+    currency: 'EGP'
+  }).formatToParts(99.99)
+);
+
+
+console.log(
+  Intl.NumberFormat('eg', {
+    style: 'currency',
+    currency: 'EGP'
+  }).formatToParts(123459.99)
+);
+
