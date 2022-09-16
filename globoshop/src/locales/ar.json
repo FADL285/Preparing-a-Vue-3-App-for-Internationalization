@@ -13,5 +13,8 @@
     "firstParagraph": "تعرف على المزيد @.lower:routes.about{'.'}",
     "secondParagraph": "هذا تطبيق تجارة إلكترونية بسيط تم إنشاؤه بواسطة Vue.js و Vite. يستخدم 'fakestoreapi' للحصول على المنتجات ومكتبة 'vue-i18n' لترجمة التطبيق.",
     "popularItem": "العنصر الأكثر شعبية على الموقع هو {product} ، لكن ليس لفترة طويلة!"
+  },
+  "items": {
+    "posted": "نشر"
   }
 }

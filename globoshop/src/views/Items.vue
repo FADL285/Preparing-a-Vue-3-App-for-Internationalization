@@ -31,7 +31,7 @@
         </template>
       </i18n-n>
       <p class="description">{{ truncateDescription(item.description, 70) }}</p>
-      <p>Posted: {{ item.date.toLocaleDateString("en") }}</p>
+      <p>{{ t("items.posted") }}: {{ d(item.date, "long") }}</p>
       <button @click="addItemToCart(item.id)">Add to cart</button>
     </div>
   </div>
@@ -44,7 +44,7 @@ import { useI18n } from "vue-i18n";
 
 export default {
   setup() {
-    const { n } = useI18n();
+    const { d, t } = useI18n();
     const store = useStore();
 
     const items = computed(() => store.getters.items);
@@ -58,7 +58,8 @@ export default {
       items,
       addItemToCart,
       truncateDescription,
-      n,
+      d,
+      t,
     };
   },
 };

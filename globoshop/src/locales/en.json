@@ -13,5 +13,8 @@
     "firstParagraph": "Learn more @.lower:routes.about{'.'}",
     "secondParagraph": "This is a simple e-commerce application made with Vue.js and Vite. It uses the \"fakestoreapi\" to get the products and the \"vue-i18n\" library to translate the application.",
     "popularItem": "The most popular item on the website is the {product}, but not for long!"
+  },
+  "items": {
+    "posted": "Posted"
   }
 }

@@ -13,5 +13,8 @@
     "firstParagraph": "En savoir plus @.lower:routes.about{'.'}",
     "secondParagraph": "Il s’agit d’une application e-commerce simple réalisée avec Vue.js et Vite. Il utilise l’\"fakestoreapi\" pour obtenir les produits et la bibliothèque \"vue-i18n\" pour traduire l’application.",
     "popularItem": "L'article le plus populaire sur le site est le {product}, mais pas pour longtemps!"
+  },
+  "items": {
+    "posted": "Publié"
   }
 }

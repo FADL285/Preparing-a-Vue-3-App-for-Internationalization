@@ -1,6 +1,7 @@
 import { createI18n } from "vue-i18n";
 // import messages from "./messages";
 import numberFormats from "./numberFormats";
+import datetimeFormats from "./datetimeFormats";
 
 function loadLocaleMessages() {
   const locales = require.context(
@@ -32,4 +33,5 @@ export default createI18n({
   // messages,
   messages: loadLocaleMessages(),
   numberFormats,
+  datetimeFormats,
 });
