@@ -1,0 +1,17 @@
+{
+  "routes": {
+    "products": "المنتجات",
+    "about": "معلومات عنا"
+  },
+  "cart": {
+    "cart": "عربة التسوق",
+    "empty": "عربة التسوق فارغة",
+    "subtotal": "المجموع الفرعي",
+    "clearButton": "إزالة هذا العنصر"
+  },
+  "aboutUs": {
+    "firstParagraph": "تعرف على المزيد @.lower:routes.about{'.'}",
+    "secondParagraph": "هذا تطبيق تجارة إلكترونية بسيط تم إنشاؤه بواسطة Vue.js و Vite. يستخدم 'fakestoreapi' للحصول على المنتجات ومكتبة 'vue-i18n' لترجمة التطبيق.",
+    "popularItem": "العنصر الأكثر شعبية على الموقع هو {product} ، لكن ليس لفترة طويلة!"
+  }
+}
