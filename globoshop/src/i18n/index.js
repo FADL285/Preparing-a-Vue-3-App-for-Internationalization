@@ -1,5 +1,29 @@
 import { createI18n } from "vue-i18n";
 
+const numberFormats = {
+  en: {
+    currency: {
+      style: "currency",
+      currency: "USD",
+      currencyDisplay: "symbol",
+    },
+  },
+  de: {
+    currency: {
+      style: "currency",
+      currency: "EUR",
+      currencyDisplay: "name",
+    },
+  },
+  fr: {
+    currency: {
+      style: "currency",
+      currency: "EUR",
+      currencyDisplay: "symbol",
+    },
+  },
+};
+
 const messages = {
   en: {
     routes: {
@@ -71,4 +95,5 @@ export default createI18n({
   legacy: false,
   // globalInjection: true, // default: true
   messages,
+  numberFormats,
 });

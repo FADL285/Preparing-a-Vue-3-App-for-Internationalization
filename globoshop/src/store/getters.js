@@ -11,7 +11,4 @@ export default {
   subtotal(state) {
     return state.subtotal;
   },
-  subtotalFormatted(state) {
-    return state.subtotal.toFixed(2);
-  }
 };

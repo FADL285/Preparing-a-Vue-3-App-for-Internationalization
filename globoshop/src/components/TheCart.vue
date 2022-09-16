@@ -7,11 +7,13 @@
       }}</span>
     </div>
     <div class="cartItems" :style="{ display: cartVisible ? 'block' : 'none' }">
-      <h3 class="col">{{ $t("cart.subtotal") }}: ${{ subtotalFormatted }}</h3>
+      <h3 class="col">
+        {{ $t("cart.subtotal") }}:{{ $n(subtotal, "currency") }}
+      </h3>
       <div class="col" v-for="item in itemsInCart" :key="item.id">
         <div class="item">
           <h3>{{ item.title }}</h3>
-          <p>${{ formatPrice(item.subtotal) }}</p>
+          <p>{{ $n(item.subtotal, "currency") }}</p>
           <p class="itemQuantity">
             <button @click="addItemToCart(item.id)">+</button>
             <span>{{ item.quantity }}</span>
@@ -37,7 +39,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["itemsInCart", "numOfItemsInCart", "subtotalFormatted"]),
+    ...mapGetters(["itemsInCart", "numOfItemsInCart", "subtotal"]),
   },
   methods: {
     ...mapActions(["addItemToCart", "removeItemFromCart", "clearItemFromCart"]),
@@ -45,9 +47,6 @@ export default {
       if (this.numOfItemsInCart > 0) {
         this.cartVisible = !this.cartVisible;
       }
-    },
-    formatPrice(price) {
-      return price.toFixed(2);
     },
   },
   watch: {
