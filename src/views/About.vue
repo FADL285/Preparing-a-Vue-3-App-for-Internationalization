@@ -7,5 +7,8 @@
       all of the people in the world. Stay tuned, because your country might be
       our next destination!
     </p>
+    <p>
+      {{ $t("popularItem", { product: $store.getters.items[0].title }) }}
+    </p>
   </div>
 </template>

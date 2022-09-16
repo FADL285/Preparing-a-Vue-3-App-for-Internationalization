@@ -12,6 +12,7 @@ const messages = {
       subtotal: "Subtotal",
       clearButton: "Remove this item",
     },
+    popularItem: "The most popular item on the website is the {product}, but not for long!"
   },
   de: {
     routes: {
@@ -24,6 +25,7 @@ const messages = {
       subtotal: "Zwischensumme",
       clearButton: "Diesen Artikel entfernen",
     },
+    popularItem: "Der beliebteste Artikel auf der Website ist der {product}, aber nicht für lange!"
   },
   fr: {
     routes: {
@@ -36,6 +38,7 @@ const messages = {
       subtotal: "Total",
       clearButton: "Enlever cet article",
     },
+    popularItem: "L'article le plus populaire sur le site est le {product}, mais pas pour longtemps!"
   },
 };
 
