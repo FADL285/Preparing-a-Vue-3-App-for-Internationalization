@@ -68,3 +68,9 @@ console.log(
   }).format(newDate)
 );
 // > "4 du matin"
+
+console.log(
+  new Intl.DateTimeFormat('en-US', {
+    dateStyle: 'full'
+  }).formatToParts(newDate)
+);
