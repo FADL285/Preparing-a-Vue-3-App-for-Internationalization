@@ -6,17 +6,35 @@ const messages = {
       items: "Items",
       about: "About us",
     },
+    cart: {
+      cart: "Cart",
+      empty: "Your cart is empty",
+      subtotal: "Subtotal",
+      clearButton: "Remove this item",
+    },
   },
   de: {
     routes: {
       items: "Artikel",
       about: "Über uns",
     },
+    cart: {
+      cart: "Warenkorb",
+      empty: "Ihr Warenkorb ist leer",
+      subtotal: "Zwischensumme",
+      clearButton: "Diesen Artikel entfernen",
+    },
   },
   fr: {
     routes: {
       items: "éléments",
       about: "À propos de nous",
+    },
+    cart: {
+      cart: "Chariot",
+      empty: "Votre panier est vide",
+      subtotal: "Total",
+      clearButton: "Enlever cet article",
     },
   },
 };

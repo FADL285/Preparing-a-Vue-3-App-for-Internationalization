@@ -1,13 +1,13 @@
 <template>
   <div class="cart">
     <div class="cartButton" @click="toggleCart">
-      Cart
+      {{ $t("cart.cart") }}
       <span :class="['total', { totalChanged: itemAddedAnimation }]">{{
         numOfItemsInCart
       }}</span>
     </div>
     <div class="cartItems" :style="{ display: cartVisible ? 'block' : 'none' }">
-      <h3 class="col">Subtotal: ${{ subtotalFormatted }}</h3>
+      <h3 class="col">{{ $t("cart.subtotal") }}: ${{ subtotalFormatted }}</h3>
       <div class="col" v-for="item in itemsInCart" :key="item.id">
         <div class="item">
           <h3>{{ item.title }}</h3>
@@ -18,7 +18,7 @@
             <button @click="removeItemFromCart(item.id)">-</button>
           </p>
           <button class="clearButton" @click="clearItemFromCart(item.id)">
-            Remove this item
+            {{ $t("cart.clearButton") }}
           </button>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     ...mapActions(["addItemToCart", "removeItemFromCart", "clearItemFromCart"]),
-    toggleCart() { 
+    toggleCart() {
       if (this.numOfItemsInCart > 0) {
         this.cartVisible = !this.cartVisible;
       }
