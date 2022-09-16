@@ -23,7 +23,8 @@ console.log(
 console.log(
   Intl.NumberFormat('eg', {
     style: 'currency',
-    currency: 'EGP'
+    currency: 'EGP',
+    currencyDisplay: 'symbol'
   }).format(123459.99)
 );
 
@@ -34,11 +35,12 @@ console.log(
   }).formatToParts(99.99)
 );
 
-
 console.log(
   Intl.NumberFormat('eg', {
     style: 'currency',
-    currency: 'EGP'
+    currency: 'USD',
+    currencyDisplay: 'symbol'
   }).formatToParts(123459.99)
 );
 
+// -------------

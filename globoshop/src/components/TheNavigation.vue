@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <h1>GloboShop</h1>
-    <router-link to="/items">{{ t("routes.items") }}</router-link>
+    <router-link to="/items">{{ t("routes.products") }}</router-link>
     <router-link to="/about">{{ t("routes.about") }}</router-link>
     <the-language-picker></the-language-picker>
   </div>

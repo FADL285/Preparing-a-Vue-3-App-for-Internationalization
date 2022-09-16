@@ -22,12 +22,19 @@ const numberFormats = {
       currencyDisplay: "symbol",
     },
   },
+  ar: {
+    currency: {
+      style: "currency",
+      currency: "EGP",
+      currencyDisplay: "symbol",
+    },
+  },
 };
 
 const messages = {
   en: {
     routes: {
-      items: "Items",
+      products: "Product",
       about: "About us",
     },
     cart: {
@@ -46,7 +53,7 @@ const messages = {
   },
   de: {
     routes: {
-      items: "Artikel",
+      products: "Produkte",
       about: "Über uns",
     },
     cart: {
@@ -65,7 +72,7 @@ const messages = {
   },
   fr: {
     routes: {
-      items: "éléments",
+      products: "Des produits",
       about: "À propos de nous",
     },
     cart: {
@@ -80,6 +87,23 @@ const messages = {
         'Il s’agit d’une application e-commerce simple réalisée avec Vue.js et Vite. Il utilise l’"fakestoreapi" pour obtenir les produits et la bibliothèque "vue-i18n" pour traduire l’application.',
       popularItem:
         "L'article le plus populaire sur le site est le {product}, mais pas pour longtemps!",
+    },
+  },
+  ar: {
+    routes: {
+      products: "المنتجات",
+      about: "معلومات عنا",
+    },
+    cart: {
+      cart: "عربة التسوق",
+      empty: "عربة التسوق فارغة",
+      subtotal: "المجموع الفرعي",
+      clearButton: "إزالة هذا العنصر",
+    },
+    aboutUs: {
+      firstParagraph: "تعرف على المزيد @.lower:routes.about{'.'}",
+      secondParagraph: `هذا تطبيق تجارة إلكترونية بسيط تم إنشاؤه بواسطة Vue.js و Vite. يستخدم "fakestoreapi" للحصول على المنتجات ومكتبة "vue-i18n" لترجمة التطبيق.`,
+      popularItem: `العنصر الأكثر شعبية على الموقع هو {product} ، لكن ليس لفترة طويلة!`,
     },
   },
 };

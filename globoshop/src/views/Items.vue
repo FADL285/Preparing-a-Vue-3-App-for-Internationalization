@@ -2,7 +2,34 @@
   <div class="col" v-for="item in items" :key="item.id">
     <div class="item">
       <h3>{{ item.title }}</h3>
-      <p>{{ n(item.price, "currency") }}</p>
+      <!-- <p>{{ n(item.price, "currency") }}</p> -->
+      <i18n-n tag="p" :value="item.price" format="currency">
+        <template #currency="{ currency }">
+          <span class="currency" style="color: blue; font-size: 1.2rem">
+            {{ currency }}
+          </span>
+        </template>
+        <template #integer="slotProps">
+          <span style="font-weight: bold; font-size: 1.3rem">{{
+            slotProps.integer
+          }}</span>
+        </template>
+        <template #group="{ group }">
+          <span class="group-test" style="font-weight: bold">
+            {{ group }}
+          </span>
+        </template>
+        <template #decimal="{ decimal }">
+          <span class="decimal" style="font-weight: bold; color: green">{{
+            decimal
+          }}</span>
+        </template>
+        <template #fraction="{ fraction }">
+          <span class="fraction" style="font-weight: bold; color: red">
+            {{ fraction }}
+          </span>
+        </template>
+      </i18n-n>
       <p class="description">{{ truncateDescription(item.description, 70) }}</p>
       <p>Posted: {{ item.date.toLocaleDateString("en") }}</p>
       <button @click="addItemToCart(item.id)">Add to cart</button>
@@ -57,7 +84,6 @@ export default {
   padding: 16px;
   text-align: center;
   background-color: #f7f7f7;
-  height: 14rem;
   overflow: hidden;
 }
 
