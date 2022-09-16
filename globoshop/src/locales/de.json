@@ -7,7 +7,8 @@
     "cart": "Warenkorb",
     "empty": "Ihr Warenkorb ist leer",
     "subtotal": "Zwischensumme",
-    "clearButton": "Diesen Artikel entfernen"
+    "clearButton": "Diesen Artikel entfernen",
+    "products": "Produkt | Produkte"
   },
   "aboutUs": {
     "firstParagraph": "Erfahren Sie mehr @.lower:routes.about{'.'}",
@@ -15,6 +16,7 @@
     "popularItem": "Der beliebteste Artikel auf der Website ist der {product}, aber nicht für lange!"
   },
   "items": {
-    "posted": "Hinzugefügt"
+    "posted": "Hinzugefügt",
+    "addToCart": "In den Warenkorb"
   }
 }

@@ -7,7 +7,8 @@
     "cart": "عربة التسوق",
     "empty": "عربة التسوق فارغة",
     "subtotal": "المجموع الفرعي",
-    "clearButton": "إزالة هذا العنصر"
+    "clearButton": "إزالة هذا العنصر",
+    "products": "منتج | منتجات"
   },
   "aboutUs": {
     "firstParagraph": "تعرف على المزيد @.lower:routes.about{'.'}",
@@ -15,6 +16,7 @@
     "popularItem": "العنصر الأكثر شعبية على الموقع هو {product} ، لكن ليس لفترة طويلة!"
   },
   "items": {
-    "posted": "نشر"
+    "posted": "نُشر",
+    "addToCart": "أضف إلى السلة"
   }
 }

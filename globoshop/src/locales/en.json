@@ -7,7 +7,8 @@
     "cart": "Cart",
     "empty": "Your cart is empty",
     "subtotal": "Subtotal",
-    "clearButton": "Remove this item"
+    "clearButton": "Remove this item",
+    "products": "Product | Products"
   },
   "aboutUs": {
     "firstParagraph": "Learn more @.lower:routes.about{'.'}",
@@ -15,6 +16,7 @@
     "popularItem": "The most popular item on the website is the {product}, but not for long!"
   },
   "items": {
-    "posted": "Posted"
+    "posted": "Posted",
+    "addToCart": "Add to cart"
   }
 }

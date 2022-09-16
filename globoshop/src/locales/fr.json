@@ -7,7 +7,8 @@
     "cart": "Chariot",
     "empty": "Votre panier est vide",
     "subtotal": "Total",
-    "clearButton": "Enlever cet article"
+    "clearButton": "Enlever cet article",
+    "products": "produit | produits"
   },
   "aboutUs": {
     "firstParagraph": "En savoir plus @.lower:routes.about{'.'}",
@@ -15,6 +16,7 @@
     "popularItem": "L'article le plus populaire sur le site est le {product}, mais pas pour longtemps!"
   },
   "items": {
-    "posted": "Publié"
+    "posted": "Publié",
+    "addToCart": "Ajouter au panier"
   }
 }

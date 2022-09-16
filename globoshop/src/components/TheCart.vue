@@ -2,11 +2,15 @@
   <div class="cart">
     <div class="cartButton" @click="toggleCart">
       {{ $t("cart.cart") }}
-      <span :class="['total', { totalChanged: itemAddedAnimation }]">{{
-        numOfItemsInCart
-      }}</span>
+      <span :class="['total', { totalChanged: itemAddedAnimation }]">
+        {{ numOfItemsInCart }}
+      </span>
     </div>
     <div class="cartItems" :style="{ display: cartVisible ? 'block' : 'none' }">
+      <h3 class="col numOfItem">
+        {{ numOfItemsInCart }}
+        {{ $t("cart.products", numOfItemsInCart) }}
+      </h3>
       <h3 class="col">
         {{ $t("cart.subtotal") }}:{{ $n(subtotal, "currency") }}
       </h3>
@@ -150,5 +154,10 @@ export default {
   font-size: 18px;
   cursor: pointer;
   border-radius: 6px;
+}
+
+.numOfItem {
+  padding: 0;
+  margin: 0;
 }
 </style>
