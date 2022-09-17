@@ -1,15 +1,21 @@
 <template>
   <div class="nav">
     <h1>GloboShop</h1>
-    <router-link to="/items">{{ t("routes.products") }}</router-link>
-    <router-link to="/about">{{ t("routes.about") }}</router-link>
+
+    <router-link :to="{ name: 'items', params: { locale } }">
+      {{ t("routes.products") }}
+    </router-link>
+    <router-link :to="{ name: 'about', params: { locale } }">
+      {{ t("routes.about") }}
+    </router-link>
+
     <the-language-picker></the-language-picker>
   </div>
 </template>
 
 <script>
-import { useStore } from "vuex";
 import { computed } from "vue";
+import { useStore } from "vuex";
 import { useI18n } from "vue-i18n";
 import TheLanguagePicker from "@/components/TheLanguagePicker.vue";
 
@@ -18,13 +24,14 @@ export default {
     TheLanguagePicker,
   },
   setup() {
-    const { t } = useI18n();
+    const { t, locale } = useI18n();
     const store = useStore();
     const numOfitemsInCart = computed(() => store.state.numOfitemsInCart);
 
     return {
       numOfitemsInCart,
       t,
+      locale,
     };
   },
 };
