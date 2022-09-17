@@ -10,6 +10,9 @@ const DEFAULT_LOCALE = "en";
 const extractLanguageFromLocale = (locale) => locale.split("-")[0];
 
 function getDefaultLocale() {
+  const persistedLocale = localStorage.getItem("locale");
+  if (persistedLocale) return persistedLocale;
+
   const availableLocales = Reflect.ownKeys(messages);
   const navigatorLocale = navigator.language;
 
