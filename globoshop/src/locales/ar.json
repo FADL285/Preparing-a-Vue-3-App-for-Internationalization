@@ -8,7 +8,7 @@
     "empty": "عربة التسوق فارغة",
     "subtotal": "المجموع الفرعي",
     "clearButton": "إزالة هذا العنصر",
-    "products": "منتج | منتجات"
+    "products": "منتج | منتجين | {n} منتجات"
   },
   "aboutUs": {
     "firstParagraph": "تعرف على المزيد @.lower:routes.about{'.'}",

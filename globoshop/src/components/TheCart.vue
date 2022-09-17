@@ -8,7 +8,6 @@
     </div>
     <div class="cartItems" :style="{ display: cartVisible ? 'block' : 'none' }">
       <h3 class="col numOfItem">
-        {{ numOfItemsInCart }}
         {{ $t("cart.products", numOfItemsInCart) }}
       </h3>
       <h3 class="col">

@@ -8,7 +8,7 @@
     "empty": "Your cart is empty",
     "subtotal": "Subtotal",
     "clearButton": "Remove this item",
-    "products": "Product | Products"
+    "products": "{n} Product | {n} Products"
   },
   "aboutUs": {
     "firstParagraph": "Learn more @.lower:routes.about{'.'}",

@@ -8,7 +8,7 @@
     "empty": "Ihr Warenkorb ist leer",
     "subtotal": "Zwischensumme",
     "clearButton": "Diesen Artikel entfernen",
-    "products": "Produkt | Produkte"
+    "products": "{n} Produkt | {n} Produkte"
   },
   "aboutUs": {
     "firstParagraph": "Erfahren Sie mehr @.lower:routes.about{'.'}",

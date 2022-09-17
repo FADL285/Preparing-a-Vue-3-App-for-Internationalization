@@ -8,7 +8,7 @@
     "empty": "Votre panier est vide",
     "subtotal": "Total",
     "clearButton": "Enlever cet article",
-    "products": "produit | produits"
+    "products": "{n} produit | {n} produits"
   },
   "aboutUs": {
     "firstParagraph": "En savoir plus @.lower:routes.about{'.'}",
