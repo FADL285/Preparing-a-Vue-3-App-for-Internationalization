@@ -3,13 +3,12 @@ import en from "@/locales/en.json"; // Default Locale
 import numberFormats from "./numberFormats";
 import datetimeFormats from "./datetimeFormats";
 import pluralRules from "./pluralRules";
-import { getDefaultLocale } from "./helpers";
 
 export const DEFAULT_LOCALE = "en";
 export const AVAILABLE_LOCALES = ["en", "ar", "de", "fr"];
 
 export default createI18n({
-  locale: getDefaultLocale(),
+  locale: DEFAULT_LOCALE,
   fallbackLocale: "en",
   messages: {
     en,

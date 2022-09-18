@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory, RouterView } from "vue-router";
 import Items from "@/views/Items.vue";
 import About from "@/views/About.vue";
-import i18n, { AVAILABLE_LOCALES } from "@/i18n";
+import i18n, { DEFAULT_LOCALE, AVAILABLE_LOCALES } from "@/i18n";
+import { getDefaultLocale, loadLocaleMessages, setHtmlLang } from "@/i18n/helpers";
 
 const routes = [
   {
@@ -20,14 +21,18 @@ const routes = [
         component: About,
       },
     ],
-    beforeEnter: (to) => {
+    beforeEnter: async (to) => {
       const paramLocale = to.params.locale;
-      if (!paramLocale) return true;
+      if (!paramLocale && getDefaultLocale() === DEFAULT_LOCALE) return true;
       if (!AVAILABLE_LOCALES.includes(paramLocale))
-        return { path: i18n.global.locale.value };
+        return { path: getDefaultLocale() };
 
-      if (i18n.global.locale.value !== paramLocale)
+      await loadLocaleMessages(i18n.global, paramLocale);
+
+      if (i18n.global.locale.value !== paramLocale) {
         i18n.global.locale.value = paramLocale;
+        setHtmlLang(paramLocale);
+      }
     },
   },
 ];

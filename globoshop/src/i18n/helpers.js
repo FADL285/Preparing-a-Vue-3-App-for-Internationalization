@@ -28,6 +28,13 @@ export function getDefaultLocale() {
   return fallback ?? DEFAULT_LOCALE;
 }
 
+// Change lang attribute of html tag
+export function setHtmlLang(locale) {
+  document.querySelector("html").setAttribute("lang", locale);
+  if (locale.startsWith("ar"))
+    document.querySelector("html").setAttribute("dir", "rtl");
+}
+
 //! Load Locale Messages -> Lazy Loading
 export async function loadLocaleMessages(i18n, locale) {
   if (i18n.availableLocales.includes(locale)) return;
