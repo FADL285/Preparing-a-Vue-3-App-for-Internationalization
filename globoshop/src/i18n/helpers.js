@@ -33,6 +33,7 @@ export function setHtmlLang(locale) {
   document.querySelector("html").setAttribute("lang", locale);
   if (locale.startsWith("ar"))
     document.querySelector("html").setAttribute("dir", "rtl");
+  else document.querySelector("html").setAttribute("dir", "ltr");
 }
 
 //! Load Locale Messages -> Lazy Loading
