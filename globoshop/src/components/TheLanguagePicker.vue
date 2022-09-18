@@ -1,28 +1,34 @@
 <script setup>
-import { watch } from "vue";
 import { useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+import { AVAILABLE_LOCALES } from "@/i18n";
+import { loadLocaleMessages } from "@/i18n/helpers";
 
 const router = useRouter();
-const { locale, availableLocales } = useI18n();
+const i18n = useI18n();
+const { locale } = i18n;
 
-watch(locale, (newLocale) => {
+const changeLocale = async ({ target: { value } }) => {
+  const newLocale = value;
+  await loadLocaleMessages(i18n, newLocale);
+  locale.value = newLocale;
   router.replace({ params: { locale: newLocale } }).catch(() => {
     router.push("/");
   });
 
   localStorage.setItem("locale", newLocale);
-});
+};
 </script>
 
 <template>
-  <select v-model="locale">
+  <select @change="changeLocale">
     <option
-      v-for="locale in availableLocales"
-      :key="`locale-${locale}`"
-      :value="locale"
+      v-for="lang in AVAILABLE_LOCALES"
+      :key="`locale-${lang}`"
+      :value="lang"
+      :selected="lang === locale"
     >
-      {{ locale }}
+      {{ lang }}
     </option>
   </select>
 </template>

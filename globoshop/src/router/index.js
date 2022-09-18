@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouterView } from "vue-router";
 import Items from "@/views/Items.vue";
 import About from "@/views/About.vue";
-import i18n from "@/i18n";
+import i18n, { AVAILABLE_LOCALES } from "@/i18n";
 
 const routes = [
   {
@@ -22,7 +22,8 @@ const routes = [
     ],
     beforeEnter: (to) => {
       const paramLocale = to.params.locale;
-      if (!i18n.global.availableLocales.includes(paramLocale))
+      if (!paramLocale) return true;
+      if (!AVAILABLE_LOCALES.includes(paramLocale))
         return { path: i18n.global.locale.value };
 
       if (i18n.global.locale.value !== paramLocale)
